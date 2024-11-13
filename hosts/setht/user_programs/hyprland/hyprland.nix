@@ -13,7 +13,7 @@
     settings = {
       decoration = {
         shadow_offset = "0 5";
-        "col.shadow" = "rgba(000000099)";
+        "col.shadow" = "rgba(00000099)";
       };
 
       "$mod" = "SUPER";
