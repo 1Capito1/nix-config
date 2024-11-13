@@ -3,9 +3,6 @@
   pkgs,
   ...
 }: {
-  home.packages = with pkgs; [
-    hyprland
-  ];
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
@@ -13,6 +10,22 @@
 
     systemd.enable = true;
 
-    settings = {};
+    settings = {
+      decoration = {
+        shadow_offset = "0 5";
+        "col.shadow" = "rgba(000000099)";
+      };
+
+      "$mod" = "SUPER";
+
+      bindm = [
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
+        "$mod ALT, mouse:272, resizewindow"
+      ];
+      bind = [
+        "$mod, ENTER, exec, wezterm"
+      ];
+    };
   };
 }
