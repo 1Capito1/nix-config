@@ -1,80 +1,88 @@
-{ config, pkgs, lib, ... }:
-
 {
-	home.username = "setht";
-	home.homeDirectory = "/home/setht";
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  imports = [
+    ./user_programs/hyprland/hyprland.nix
+  ];
+  home.username = "setht";
+  home.homeDirectory = "/home/setht";
 
-	xresources.properties = {
-		"Xcursor.size" = 16;
-		"Xft.dpi" = 172;
-	};
+  xresources.properties = {
+    "Xcursor.size" = 16;
+    "Xft.dpi" = 172;
+  };
 
-	home.packages = with pkgs; [
-# useful CLI Tools
-		neofetch
-			yazi
-			tmux
+  home.packages = with pkgs; [
+    # useful CLI Tools
+    neofetch
+    yazi
+    tmux
 
-# archives
-			zip
-			xz
-			unzip
-			p7zip
+    # important
 
-# utils
-			ripgrep
-			jq
-			yq-go
-			eza
-			fzf
+    # archives
+    zip
+    xz
+    unzip
+    p7zip
 
-# misc
-			cowsay
-            lolcat
-			file
-			which
-			tree
-			gnused
-			gnutar
-			gawk
-			zstd
-			gnupg
+    # utils
+    ripgrep
+    jq
+    yq-go
+    eza
+    fzf
 
-			nix-output-monitor
+    # misc
+    cowsay
+    lolcat
+    file
+    which
+    tree
+    gnused
+    gnutar
+    gawk
+    zstd
+    gnupg
 
-			glow # preview md
-			btop
-			];
+    nix-output-monitor
 
-	programs.git = {
-		enable = true;
-		userName = "Seth Tootell";
-		userEmail = "seth.l.tootell@gmail.com";
-	};
+    glow # preview md
+    btop
+  ];
 
-	programs.bash = {
-		enable = true;
-		enableCompletion = true;
+  programs.git = {
+    enable = true;
+    userName = "Seth Tootell";
+    userEmail = "seth.l.tootell@gmail.com";
+  };
 
-		shellAliases = {
-			rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#setht";
-		};
-	};
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
 
-	programs.neovim = {
-		enable = true;
-		defaultEditor = true;
-		viAlias = true;
-		vimAlias = true;
-		vimdiffAlias = true;
-	};
-
-	home.stateVersion = "23.11";
-
-	programs.home-manager.enable = true;
-
-    programs.tmux = {
-        enable = true;
-        clock24 = true;
+    shellAliases = {
+      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#setht";
     };
+  };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+  };
+
+  home.stateVersion = "23.11";
+
+  programs.home-manager.enable = true;
+
+  programs.tmux = {
+    enable = true;
+    clock24 = true;
+  };
 }
