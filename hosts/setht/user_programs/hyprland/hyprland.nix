@@ -25,6 +25,7 @@
       ];
       bind = [
         "$mod, return, exec, wezterm"
+        "$mod, f, exec, firefox"
       ];
     };
   };
