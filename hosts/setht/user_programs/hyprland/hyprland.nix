@@ -24,7 +24,7 @@
         "$mod ALT, mouse:272, resizewindow"
       ];
       bind = [
-        "$mod, ENTER, exec, wezterm"
+        "$mod, return, exec, wezterm"
       ];
     };
   };
