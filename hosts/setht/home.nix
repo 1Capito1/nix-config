@@ -4,9 +4,6 @@
   lib,
   ...
 }: {
-  imports = [
-    ./user_programs/hyprland/hyprland.nix
-  ];
   home.username = "setht";
   home.homeDirectory = "/home/setht";
 

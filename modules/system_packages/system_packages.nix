@@ -18,7 +18,6 @@
     nixd
     oh-my-posh
     alejandra
-    hyprland
     gnome.gdm
   ];
 }
