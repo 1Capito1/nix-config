@@ -3,7 +3,9 @@
   pkgs,
   lib,
   ...
-}: {
+}: let
+  customNeovim = import ./user_programs/neovim/nvim.nix;
+in {
   home.username = "setht";
   home.homeDirectory = "/home/setht";
 
