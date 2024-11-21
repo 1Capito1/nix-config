@@ -18,6 +18,9 @@
     alejandra
     gnome.gdm
 
+    # Misc Tools
+    libnotify
+
     # LSP's
     nixd
     nil
