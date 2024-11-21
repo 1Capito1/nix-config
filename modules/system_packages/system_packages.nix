@@ -14,10 +14,13 @@
     luarocks
     sqlite
     gcc
-    lua-language-server
-    nixd
     oh-my-posh
     alejandra
     gnome.gdm
+
+    # LSP's
+    nixd
+    nil
+    lua-language-server
   ];
 }
