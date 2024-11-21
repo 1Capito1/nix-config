@@ -96,7 +96,6 @@
     extraGroups = ["networkmanager" "wheel" "nixos"];
     packages = with pkgs; [
       #  thunderbird
-      neovim
       wezterm
     ];
   };

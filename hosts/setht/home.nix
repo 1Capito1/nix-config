@@ -3,9 +3,7 @@
   pkgs,
   lib,
   ...
-}: let
-  # customNeovim = ./nvim.nix
-in {
+}: {
   home.username = "setht";
   home.homeDirectory = "/home/setht";
 
@@ -67,8 +65,6 @@ in {
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#setht";
     };
   };
-
-  # programs.neovim = customNeovim pkgs;
 
   home.stateVersion = "23.11";
 
