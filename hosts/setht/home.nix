@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  customNeovim = import ./user_programs/neovim/nvim.nix;
+  # customNeovim = ./nvim.nix
 in {
   home.username = "setht";
   home.homeDirectory = "/home/setht";
@@ -68,13 +68,7 @@ in {
     };
   };
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
-  };
+  # programs.neovim = customNeovim pkgs;
 
   home.stateVersion = "23.11";
 
