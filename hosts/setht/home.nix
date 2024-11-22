@@ -12,6 +12,10 @@
     "Xft.dpi" = 172;
   };
 
+  imports = [
+    ../../modules/user_programs/misc
+  ];
+
   home.packages = with pkgs; [
     # useful CLI Tools
     neofetch
