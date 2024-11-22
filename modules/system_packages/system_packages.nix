@@ -18,6 +18,10 @@
     alejandra
     gnome.gdm
 
+    # CLI Tools
+    zoxide
+    lazygit
+
     # Misc Tools
     libnotify
 
