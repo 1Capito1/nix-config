@@ -1,5 +1,5 @@
 {
-  modules = [
+  imports = [
     ./misc.nix
   ];
 }
