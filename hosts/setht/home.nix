@@ -3,7 +3,9 @@
   pkgs,
   lib,
   ...
-}: {
+}: let
+  baseDir = builtins.getEnv "NIXOS_CONFIG_DIR";
+in {
   home.username = "setht";
   home.homeDirectory = "/home/setht";
 
@@ -11,11 +13,9 @@
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
   };
-
   imports = [
-    ../../modules/user_programs/misc
+    ../../modules/user_programs/misc/default.nix
   ];
-
   home.packages = with pkgs; [
     # useful CLI Tools
     neofetch
