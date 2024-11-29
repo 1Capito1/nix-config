@@ -14,7 +14,7 @@ in {
     "Xft.dpi" = 172;
   };
   imports = [
-    ../../modules/user_programs/misc/default.nix
+    ../../modules/user_programs
   ];
   home.packages = with pkgs; [
     # useful CLI Tools
