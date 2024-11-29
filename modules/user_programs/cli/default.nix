@@ -1,5 +1,5 @@
 {
   imports = [
-    ./cli
+    ./zoxide.nix
   ];
 }
