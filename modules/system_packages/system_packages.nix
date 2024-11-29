@@ -29,5 +29,6 @@
     nixd
     nil
     lua-language-server
+    zig
   ];
 }
