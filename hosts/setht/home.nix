@@ -73,9 +73,4 @@ in {
   home.stateVersion = "23.11";
 
   programs.home-manager.enable = true;
-
-  programs.tmux = {
-    enable = true;
-    clock24 = true;
-  };
 }
