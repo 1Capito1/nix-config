@@ -16,6 +16,8 @@
     oh-my-posh
     alejandra
     gnome.gdm
+    zsh
+    fprintd
 
     # CLI Tools
     zoxide
@@ -23,12 +25,19 @@
 
     # Misc Tools
     libnotify
+    jq
+    slurp
+    wl-clipboard
 
     # DE stuffs
     hyprland
     hyprshot
     wofi
     waybar
+    swaynotificationcenter
+    hyprlock
+    hypridle
+    hyprpaper
 
     # LSP's
     nixd

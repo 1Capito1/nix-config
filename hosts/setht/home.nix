@@ -49,6 +49,7 @@ in {
     gawk
     zstd
     gnupg
+    oh-my-zsh
 
     nix-output-monitor
 

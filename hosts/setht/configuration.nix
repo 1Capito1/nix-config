@@ -13,7 +13,10 @@
   ];
 
   programs.hyprland.enable = true;
-  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+  services.fprintd.enable = true;
+  services.fprintd.tod.enable = true;
+  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
+
 
   # Bootloader.
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -89,6 +92,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  programs.zsh.enable = true;
   users.groups.nixos = {};
   users.users.setht = {
     isNormalUser = true;
@@ -114,8 +118,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.variables.EDITOR = "nvim";
-  programs.fish.enable = true;
-  users.defaultUserShell = pkgs.fish;
+  programs.fish.enable = false;
+  users.defaultUserShell = pkgs.zsh;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
