@@ -12,13 +12,13 @@
     ./hardware-configuration.nix
   ];
 
+  programs.hyprland.enable = true;
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   # Bootloader.
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
   environment.variables = {
     NIXOS_CONFIG_DIR = /home/setht/.config/nixos;
   };

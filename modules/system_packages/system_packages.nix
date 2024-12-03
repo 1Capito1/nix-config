@@ -10,7 +10,6 @@
     curl
     kitty
     xclip
-    fish
     luarocks
     sqlite
     gcc
@@ -24,6 +23,12 @@
 
     # Misc Tools
     libnotify
+
+    # DE stuffs
+    hyprland
+    hyprshot
+    wofi
+    waybar
 
     # LSP's
     nixd

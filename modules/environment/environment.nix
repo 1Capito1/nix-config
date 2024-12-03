@@ -5,4 +5,6 @@
     group = "nixos";
     user = "root";
   };
+
+  environment.variables.PATH = "~/.config/nixvim/result/bin:$PATH";
 }

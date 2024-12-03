@@ -19,6 +19,7 @@ in {
   home.packages = with pkgs; [
     # useful CLI Tools
     neofetch
+    fastfetch
     yazi
     tmux
 
