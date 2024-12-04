@@ -24,6 +24,8 @@ in {
     tmux
 
     # important
+    spotify
+    discord
 
     # archives
     zip

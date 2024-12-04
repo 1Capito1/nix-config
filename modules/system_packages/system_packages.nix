@@ -18,6 +18,9 @@
     gnome.gdm
     zsh
     fprintd
+    wev
+    brightnessctl
+    bitwarden-desktop
 
     # CLI Tools
     zoxide

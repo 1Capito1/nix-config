@@ -17,6 +17,8 @@
   services.fprintd.tod.enable = true;
   services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
 
+  nixpkgs.config.allowUnfree = true;
+
 
   # Bootloader.
   nix.settings.experimental-features = ["nix-command" "flakes"];
