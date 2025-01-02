@@ -15,22 +15,32 @@
     gcc
     oh-my-posh
     alejandra
-    gnome.gdm
+    gdm
     zsh
     fprintd
     wev
     brightnessctl
     bitwarden-desktop
+    ripcord
+    wine
+    winetricks
+    steam
+    python3
+    discord
+    SDL2
 
     # CLI Tools
     zoxide
     lazygit
+    python312Packages.git-filter-repo
+    mpd
 
     # Misc Tools
     libnotify
     jq
     slurp
     wl-clipboard
+    steam-run
 
     # DE stuffs
     hyprland
@@ -46,6 +56,14 @@
     nixd
     nil
     lua-language-server
+    rust-analyzer
+    
+    # compilers
+    cargo
+    rustup
     zig
+
+    #shhhh
+    renpy
   ];
 }
